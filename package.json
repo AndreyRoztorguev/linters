@@ -1,0 +1,10 @@
+{
+  "name": "linters",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrey Roztorguev <andrew.roztor99@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.16.0"
+  }
+}

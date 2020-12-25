@@ -1,0 +1,8 @@
+{
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "files.autoSave": "onFocusChange",
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+    }
+  }
