@@ -1,4 +1,5 @@
 module.exports = {
+    parser: '@typescript-eslint/parser',
     root: true,
     parserOptions: {
         ecmaVersion: 2020,
@@ -21,9 +22,14 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:jsx-a11y/recommended',
-        'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
+        'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'prettier/@typescript-eslint'
     ],
     rules: {
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }] // Use our .prettierrc file as source
+        'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
+        '@typescript-eslint/no-var-requires': 0, //0 equil off, 1 equul warn, 2 equil error
+        '@typescript-eslint/no-explicit-any': 0
     }
 };

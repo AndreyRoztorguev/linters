@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: ['./src/index.tsx'],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -11,6 +11,11 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.(ts|tsx)$/,
+                use: ['ts-loader'],
+                exclude: /node_modules/
+            },
             {
                 test: /\.jsx?$/,
                 use: 'babel-loader'
@@ -25,14 +30,13 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader'
-                ],
-                exclude: /node_modules/
+                ]
             }
         ]
     },
     resolve: {
         modules: ['node_modules'],
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.css']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -44,6 +48,7 @@ module.exports = {
     ],
     devServer: {
         port: 8081,
-        open: true
+        open: true,
+        hot: true
     }
 };
