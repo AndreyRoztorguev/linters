@@ -4,7 +4,31 @@
   "main": "index.js",
   "author": "Andrey Roztorguev <andrew.roztor99@gmail.com>",
   "license": "MIT",
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "dev": "webpack serve --mode=development --config ./webpack.config.js",
+    "build": "webpack --mode=production --config ./webpack.config.js"
+  },
   "devDependencies": {
-    "eslint": "^7.16.0"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.16.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
